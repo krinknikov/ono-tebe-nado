@@ -1,381 +1,377 @@
 /*   шапка    */
 
 .header {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    padding-top: 117px;
-    padding-left: 51px;
-    padding-right: 49px;
-    padding-bottom: 98px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding-top: 117px;
+  padding-left: 49px;
+  padding-right: 49px;
+  padding-bottom: 98px;
 }
 
-
 .header__links-list {
-    display: flex;
-    list-style: circle;
-    gap: 33px;
+  display: flex;
+  list-style: circle;
+  gap: 33px;
 }
 
 .header__links-list-item_no-bullit {
-    font-family: Raleway, sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    text-decoration: none;
-    list-style: none;
-    color: black;
-    line-height: normal;
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  list-style: none;
+  color: black;
+  line-height: normal;
+}
+
+.header__links-list-item_no-bullit_a {
+  text-decoration: none;
 }
 
 .header__links-list-item {
-    font-family: Raleway, sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    color: black;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    line-height: normal;
-
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  line-height: normal;
 }
 
-.header__address {
-    justify-self: end;
-    max-width: 240px;
-    font-family: Raleway, sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    text-underline-offset: 4px;
-    text-decoration: none;
-    line-height: 135%;
+.address {
+  max-width: 240px;
+  font-family: Raleway, sans-serif;
+  text-underline-offset: 4px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  text-decoration: none; /*посмотреть потом внимательно про наследование*/
+}
+
+.address__top__menu {
+  justify-self: end;
 }
 
 .header_logo {
-    display: grid;
-    margin-left: 220px;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
 }
 
 .header__logo-image {
-    justify-self: space-between;
-    height: 105px;
-    width: 148px;
+  /*justify-self: center; нужно ли? min-content*/
+  height: 105px;
+  width: 148px;
 }
 
 .header__address {
-    justify-self: end;
+  justify-self: end;
 }
-
 
 /*    обложка    */
 
-
 .cover {
-    position: relative; 
-    min-height: 757px;
-    background-image: url(../images/cover.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  position: relative;
+  min-height: 757px;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .overlay {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: black;
-    opacity: 0.6;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.6;
 }
 
 .cover__title {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    gap: 20px;
-    padding: 163px 50px 103px;
-    color: white;
-    font-size: 100px;
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: 30px;
-    text-transform: uppercase;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 20px;
+  padding: 163px 50px 103px;
+  color: white;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 30px;
+  text-transform: uppercase;
 }
 
 .aligned-text {
-    display: flex;
-    align-self: start;
-    font-style: normal;
-    line-height: 115%;
+  display: flex;
+  align-self: start;
 }
 
 .letter-spacing-extended {
-    letter-spacing: 60px;
+  letter-spacing: 60px;
 }
 
 .aligned-text_center {
-    display: flex;
-    align-self: center;
-    line-height: 100%;
+  align-self: center;
+  line-height: 100%;
 }
 
 .aligned-text_right {
-    display: flex;
-    align-self: end;
-    line-height: 100%;
-    }
+  align-self: end;
+  line-height: 100%;
+}
 
 .no-letter-spacing {
-    display: flex;
-    align-self: start;
-    letter-spacing: 0;
-    font-style: normal;
+  letter-spacing: 0;
+  font-style: normal;
 }
-
-
 
 .cover__description {
-    display: flex;
-    position: relative;
-    justify-content: end;
-    margin-top: 32px;
-    padding: 0 51px 50px;
-    gap: 78px;
-}
-  
-.cover__description-text {
-    align-self: center;
-    color: white;
-    font-size: 22px;
-    line-height: 28px;
-    text-transform: uppercase;
-    word-spacing: 18px;
-}
-  
-button {
-    border: 1px solid white;
-    padding: 12px 32px;
-    font-size: 22px;
-    font-weight: 100; /*проверить шрифты?*/
-    color: white;
-    text-transform: uppercase;
-    background: transparent;
+  display: flex;
+  position: relative;
+  justify-content: end;
+  margin-top: 32px;
+  padding: 0 51px 50px;
+  gap: 78px;
 }
 
+.cover__description-text {
+  align-self: center;
+  color: white;
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  word-spacing: 18px;
+}
+
+button {
+  font-family: Raleway, sans-serif;
+  border: 1px solid currentColor;
+  padding: 12px 32px;
+  font-size: 22px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  background: transparent;
+}
 
 /*    лоты    */
 
-
 .lots {
-
-    padding-top: 180px;
-    padding-left: 50px;
-    padding-right: 50px;
+  padding-top: 180px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-  .lots__heading {
-    margin-left: 40px;
-    padding-bottom: 27px;
-    color: black;
-    font-family: Raleway, sans-serif;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
+.lots__heading {
+  margin-left: 40px;
+  padding-bottom: 27px;
+  color: black;
+  font-family: Raleway, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
-  .lots__card-list {
-    display: flex;
-    padding-bottom: 30px;
-    gap: 25px;
-    list-style: none;
+.lots__card-list {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 30px;
+  gap: 25px;
+  list-style: none;
 }
 
-  .lots__card-list-item {
-    flex-grow: 1;
-    width: 430px;
-    min-height: 450px;
+.lots__card-list-item {
+  flex-grow: 1;
+  width: 430px;
+  min-height: 450px;
 }
 
 .card-link {
-    display: block;
-    height: 100%;
-    text-decoration: underline;
+  display: block;
+  height: 100%;
 }
 
 .card {
-    position: relative;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 40px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-decoration: underline;
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-decoration: underline;
 }
 
 .card_type_film {
-    background-image: url(../images/card-lot-01.jpg);
+  background-image: url(../images/card-lot-01.jpg);
 }
 
 .card_type_book {
-    background-image: url(../images/card-lot-02.jpg);
+  background-image: url(../images/card-lot-02.jpg);
 }
 
 .card_type_picture {
-    background-image: url(../images/card-lot-03.jpg);
+  background-image: url(../images/card-lot-03.jpg);
 }
 
 .card__title {
-    z-index: 2;
-    color: white;
-    font-size: 22px;
-    line-height: 120%;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-transform: uppercase;
+  z-index: 2;
+  color: white;
+  font-size: 22px;
+  line-height: 120%;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-transform: uppercase;
 }
 
-
 .card__text {
-    z-index: 2;
-    color: white;
-    font-size: 20px;
-    line-height: 120%;
+  z-index: 2;
+  color: white;
+  font-size: 20px;
+  line-height: 120%;
 }
 
 .lots__look-more-link {
-    padding-left: 40px;
-    font-size: 20px;
-    line-height: 1.15;
-    text-decoration: underline !important;
-    text-underline-offset: 4px;
+  padding-left: 40px;
+  font-size: 20px;
+  line-height: 1.15;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
-
 
 /*    Об аукционе    */
 
-
 .about {
-    display: grid;
-    grid-template-columns: 430px 1fr;
-    padding: 182px 50px 0;
-    gap: 25px;
+  display: grid;
+  grid-template-columns: 430px 1fr;
+  padding: 182px 50px 0;
+  gap: 25px;
 }
 
 .about__column {
-    justify-self: center;
+  justify-self: center;
 }
 
 .about__logo {
-    border-radius: 50%;
-    width: 240px;
-    height: 240px;
-    background-color: black;
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+  background-color: black;
 }
 
 .about__logo-image {
-    display: block;
-    margin: 0 auto;
-    height: 100%;
-    width: 148px;
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: 148px;
 }
 
 .about__title {
-    padding: 100px 0 100px;
-    color: black;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
+  padding: 100px 0 100px;
+  color: black;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
-.about__text {
-    color: black;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-bottom: 27px;
+/*.about__text {
+  color: black;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 27px;
+}*/
+
+.about__text:last-child {
+  color: black;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;  
 }
 
 /*    футер    */
 
 .footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 152px 50px 90px;
+  display: flex;
+  justify-content: space-between;
+  padding: 152px 50px 90px;
 }
 
 .address {
-    max-width: 240px;
-    justify-self: end;
-    font-family: Raleway, sans-serif;
-    text-underline-offset: 4px;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 135%;
-    text-decoration: none; /*посмотреть потом внимательно про наследование*/
+  max-width: 240px;
+  justify-self: end;
+  font-family: Raleway, sans-serif;
+  text-underline-offset: 4px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  text-decoration: none; /*посмотреть потом внимательно про наследование*/
 }
 
 .footer__menu {
-    text-align: center;
+  text-align: center;
 }
 
 .footer__menu-list {
-    text-align: center;
-    gap: 33px;
-    list-style: none;
+  text-align: center;
+  gap: 33px;
+  list-style: none;
 }
 
 .footer__menu-list-item {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .footer__menu-link_active {
-    font-size: 18px !important;
-    text-decoration: none !important;
-
+  font-size: 18px;
+  text-decoration: none;
 }
 
 .footer__social-list {
-    display: flex;
-    gap: 48px;
-    list-style: none;
+  display: flex;
+  gap: 48px;
+  list-style: none;
 }
 
 .footer__social-list-item {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .footer__links-list-item {
-    font-size: black;
-    font-size:18px;
-    text-underline-offset: 4px;
+  font-size: black;
+  font-size: 18px;
+  text-underline-offset: 4px;
 }
 
 .footer__social-link {
-    color: black;
-    font-family: Raleway, sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-decoration: underline;
-    text-underline-offset: 4px;
+  color: black;
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .footer__social-icon {
-    width: 48px;
-    height: 48px;
+  width: 48px;
+  height: 48px;
 }

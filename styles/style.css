@@ -2,12 +2,14 @@
 
 .header {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   padding-top: 92px;
   padding-left: 49px;
   padding-right: 49px;
   padding-bottom: 98px;
+  margin-top: 18px; /* при значениях паддинг-топ/боттом из макета фигмы без этого свойства
+   макет не бьется по высоте (смотрю через перфект пиксель). верное ли это решение?*/
 }
 
 .header__links-list {
@@ -26,9 +28,9 @@
   line-height: normal;
 }
 
-.header__links-list-item_no-bullit_a {
+/*.header__links-list-item_no-bullit_a {
   text-decoration: none;
-}
+}*/
 
 .header__links-list-item {
   font-family: Raleway, sans-serif;
@@ -58,7 +60,6 @@
 
 .header_logo {
   display: grid;
-  grid-template-columns: 1fr min-content 1fr;
 }
 
 .header__logo-image {
@@ -196,6 +197,7 @@ button {
 .card-link {
   display: block;
   height: 100%;
+  text-decoration: none;
 }
 
 .card {
@@ -286,14 +288,14 @@ button {
   text-transform: uppercase;
 }
 
-/*.about__text {
+.about__text {
   color: black;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   padding-bottom: 27px;
-}*/
+}
 
 .about__text:last-child {
   color: black;

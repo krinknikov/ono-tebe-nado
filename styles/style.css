@@ -296,7 +296,8 @@ button {
 }
 
 .about__text:last-child {
-  margin-bottom: 0; 
+  padding-bottom: 0; /* «Вы используете внутренний нижний отступ для создания разрывов между элементами, необходимо обнулить padding-bottom» - действительно)) 
+  спасибо за ревью!*/
 }
 
 /*    футер    */
@@ -304,7 +305,7 @@ button {
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 180px 50px 90px; /* «Верхний отступ нужно будет скорректировать» - речь про отступ как у макета же?*/
+  padding: 180px 50px 90px;
 }
 
 .address {
